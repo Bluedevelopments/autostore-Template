@@ -32,17 +32,17 @@ export const SubmodelsList: React.FC<SubmodelsListProps> = ({ modelId, onSelect,
               <img
                 src={submodel.image}
                 alt={submodel.name}
-                className="w-32 h-32 object-contain mb-6 rounded flex-shrink-0"
+                className="w-20 h-20 object-contain mb-6 rounded flex-shrink-0"
                 onError={(e) => (e.currentTarget.style.display = 'none')}
               />
             ) : (
-              <div className="w-32 h-32 flex items-center justify-center bg-gray-100 dark:bg-gray-800 mb-6 rounded flex-shrink-0">
-                <span className="text-gray-400 text-5xl">🚙</span>
+              <div className="w-20 h-20 flex items-center justify-center bg-gray-100 dark:bg-gray-800 mb-6 rounded flex-shrink-0">
+                <span className="text-gray-400 text-4xl">🚙</span>
               </div>
             )}
             <span
-              className="font-semibold text-center text-lg mt-4 break-words w-full flex items-center justify-center overflow-hidden text-ellipsis px-4 min-h-[2.5rem] line-clamp-2 whitespace-pre-line"
-              title={submodel.name.length > 24 ? submodel.name : undefined}
+              className="font-medium text-center text-base mt-4 w-full flex items-center justify-center overflow-hidden text-ellipsis px-4 min-h-[1.5rem] line-clamp-1 whitespace-nowrap"
+              title={submodel.name}
               aria-label={submodel.name}
             >
               {submodel.name}
